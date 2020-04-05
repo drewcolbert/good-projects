@@ -1,7 +1,4 @@
-mywinedata <- read.csv("~/Downloads/winequality-white.csv", sep=";", stringsAsFactors = FALSE)
-mywinedata <- mywinedata[,-1:-3]
-mywinedata <- mywinedata[,-6:-7]
-mywinedata
+winequality.white <- read.csv("~/Downloads/winequality-white.csv", sep=";", stringsAsFactors = FALSE)
 #summary of dataset
 summary(winequality.white)
 
@@ -79,13 +76,6 @@ lq1
 importance(lq1)
 varImpPlot(lq1, main= "Low Quality Importance")
 
-#neural network 
-install.packages("neuralnet")
-library("neuralnet")
-nndata <- winequality.white
-nn <- neuralnet(quality ~ ., nndata, hidden = 3, linear.output = FALSE, threshold = .01)
-plot(nn)
-
 #ksvm testing 
 install.packages("kernlab")
 library("kernlab")
@@ -126,17 +116,7 @@ sugaranddensity
 freesulfurandvolatile <- ggplot(winequality.white, aes(y= free.sulfur.dioxide, x= volatile.acidity, color= quality)) + geom_point() + scale_color_gradient(low= "red", high= "green") 
 freesulfurandvolatile
 
-alcohol <- ggplot(winequality.white, aes(x= quality, y= alcohol)) + geom_point()
-alcohol
-
-density <- ggplot(winequality.white, aes(x= quality, y= density)) + geom_point()  
-density
-
-volatile <- ggplot(winequality.white, aes(x= quality, y= volatile.acidity)) + geom_point()  
-volatile
-
-freesulfur <- ggplot(winequality.white, aes(x= quality, y= free.sulfur.dioxide)) + geom_point()  
-freesulfur
+gridExtra::grid.arrange(alcoholanddensity, alcoholandsugar, sugaranddensity, freesulfurandvolatile)
 
 
 
