@@ -1,3 +1,9 @@
+'''
+This program reads in and analyzes a wine quality dataset. Runs a RandomForest and KSVM model to try and predict whether
+a wine will be high or low quality based on the chemical components of the wine. EDA is performed along with correlations
+and 4 different charts that look at the relationship between two variables and if the wine was high or low quality
+'''
+
 winequality.white <- read.csv("~/Downloads/winequality-white.csv", sep=";", stringsAsFactors = FALSE)
 #summary of dataset
 summary(winequality.white)
