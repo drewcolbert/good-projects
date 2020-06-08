@@ -7,6 +7,15 @@ Created on Sat Apr 25 17:50:14 2020
 """
 
 
+'''
+This program uses BeautifulSoup to collect career hitting stats for all of the current 
+players in the MLB. We then read in the career stats of the players who are currently in the MLB Hall of Fame
+and compare the averages for each group. Then two predictive models are run (KNN and RandomForest) to 
+predict if current MLB players are on their way to making the Hall of Fame based on their current career stats.
+Two functions are defined (one fore each model) that allow a user to input a players career hitting stats and will output
+if that player is on their way to Hall of Fame or not
+'''
+
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 import re
