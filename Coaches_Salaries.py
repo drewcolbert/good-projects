@@ -17,7 +17,7 @@ import numpy as np
 import statsmodels.formula.api as smf
 
 ''' This modules goal is to create a linear model to predict the salary of 
-a head football coach of a division 1 program. There is --- different parts.
+a head football coach of a division 1 program. There is 6 different parts.
 1. Download the original data into python (salaries_data)
 2. Use beautiful soup to scrape the web for more information to go into
 the model. (Revenue Data, record data)
