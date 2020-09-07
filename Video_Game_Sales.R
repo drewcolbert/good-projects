@@ -1,3 +1,17 @@
+'''
+This project aims to be able to predict the global sales of various video games. 
+The sales numbers were binned into three categories for prediciton. Various techniques were tried 
+for prediciton. 
+1. Naive Bayes
+2. Random Forest
+Also generated a word cloud from the titles of the video games and Association Rules Mining was performed on 
+the top selling titles to see if any patterns could be found in the titles.
+Descriptive analysis was also performed and multiple charts were generated to look at any trends or patterns in the data
+'''
+
+
+
+
 # READ IN THE DATA
 vg_data <- read.csv("~/Downloads/vgsales.csv")
 vg_data2 <- read.csv("~/Downloads/chggamesales.csv")
