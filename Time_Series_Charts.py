@@ -6,6 +6,10 @@ Created on Fri Jul 31 20:11:50 2020
 @author: drewcolbert
 """
 
+'''
+This code generates one time series plot of the median housing values for 
+4 metro areas in arkansas
+'''
 
 import pandas as pd
 import matplotlib as plt
