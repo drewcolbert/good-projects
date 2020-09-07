@@ -8,4 +8,4 @@ Projects showing a wide array of analytical techniques including but not limited
 - full data analysis from collection to prediction
 - web scraping using beautiful soup 
 
-mostly contains python code with one project from R
+mostly contains python code with a couple projects from R
